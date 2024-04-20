@@ -20,6 +20,7 @@ import tempfile
 
 # python 2 and python 3 compatibility library
 import six
+from basyx.aas.adapter.json import StrictAASFromJsonDecoder, AASToJsonEncoder
 from six.moves.urllib.parse import quote
 
 from swagger_client.configuration import Configuration
@@ -196,18 +197,11 @@ class ApiClient(object):
 
         if isinstance(obj, dict):
             obj_dict = obj
+            return {key: self.sanitize_for_serialization(val)
+                    for key, val in six.iteritems(obj_dict)}
         else:
-            # Convert model obj to dict except
-            # attributes `swagger_types`, `attribute_map`
-            # and attributes which value is not None.
-            # Convert attribute name to json key in
-            # model definition for request.
-            obj_dict = {obj.attribute_map[attr]: getattr(obj, attr)
-                        for attr, _ in six.iteritems(obj.swagger_types)
-                        if getattr(obj, attr) is not None}
+            return json.dumps(obj, cls=AASToJsonEncoder)
 
-        return {key: self.sanitize_for_serialization(val)
-                for key, val in six.iteritems(obj_dict)}
 
     def deserialize(self, response, response_type):
         """Deserializes response into an object.
@@ -224,10 +218,11 @@ class ApiClient(object):
             return self.__deserialize_file(response)
 
         # fetch data from response object
-        try:
-            data = json.loads(response.data)
-        except ValueError:
-            data = response.data
+        data = json.loads(response.data.decode('utf-8'), cls=StrictAASFromJsonDecoder)
+        # try:
+        #     data = json.loads(response.data.decode('utf-8'), cls=StrictAASFromJsonDecoder)
+        # except ValueError:
+        #     data = response.data
 
         return self.__deserialize(data, response_type)
 
@@ -268,7 +263,7 @@ class ApiClient(object):
         elif klass == datetime.datetime:
             return self.__deserialize_datatime(data)
         else:
-            return self.__deserialize_model(data, klass)
+            return data
 
     def call_api(self, resource_path, method,
                  path_params=None, query_params=None, header_params=None,
@@ -596,37 +591,3 @@ class ApiClient(object):
 
     def __hasattr(self, object, name):
             return name in object.__class__.__dict__
-
-    def __deserialize_model(self, data, klass):
-        """Deserializes list or dict to model.
-
-        :param data: dict, list.
-        :param klass: class literal.
-        :return: model object.
-        """
-
-        if not klass.swagger_types and not self.__hasattr(klass, 'get_real_child_model'):
-            return data
-
-        kwargs = {}
-        if klass.swagger_types is not None:
-            for attr, attr_type in six.iteritems(klass.swagger_types):
-                if (data is not None and
-                        klass.attribute_map[attr] in data and
-                        isinstance(data, (list, dict))):
-                    value = data[klass.attribute_map[attr]]
-                    kwargs[attr] = self.__deserialize(value, attr_type)
-
-        instance = klass(**kwargs)
-
-        if (isinstance(instance, dict) and
-                klass.swagger_types is not None and
-                isinstance(data, dict)):
-            for key, value in data.items():
-                if key not in klass.swagger_types:
-                    instance[key] = value
-        if self.__hasattr(instance, 'get_real_child_model'):
-            klass_name = instance.get_real_child_model(data)
-            if klass_name:
-                instance = self.__deserialize(data, klass_name)
-        return instance
