@@ -1,18 +1,16 @@
-from aas_api_python_client import ApiClient, Configuration, SubmodelRepositoryAPIApi, AASXFileServerAPIApi
+from aas_api_python_client import ApiClient, Configuration, AssetAdministrationShellRepositoryAPIApi
 
 from aas_api_python_client.util import string_to_base64url
 
 configuration = Configuration()
-configuration.host = "SOME_HOST"
-
+configuration.host = "http://localhost:8080/api/v3.0"
 
 api_client = ApiClient(configuration=configuration)
-submodelClient = SubmodelRepositoryAPIApi(api_client=api_client)
+aasRepoClient = AssetAdministrationShellRepositoryAPIApi(api_client=api_client)
 
-encoded_id = string_to_base64url("https://example.com/ids/sm/0154_9092_1122_2220")
-submodel = submodelClient.get_submodel_by_id(encoded_id)
-print(submodel)
-
-
-aasx_ids = AASXFileServerAPIApi(api_client=api_client).get_all_aasx_package_ids()
-print(aasx_ids)
+all_aas = aasRepoClient.get_all_asset_administration_shells()
+print(all_aas)
+aas = aasRepoClient.get_asset_administration_shell_by_id(string_to_base64url('https://acplt.org/Test_AssetAdministrationShell'))
+print(aas)
+aas_info = aasRepoClient.get_asset_information_aas_repository(string_to_base64url('https://acplt.org/Test_AssetAdministrationShell'))
+print(aas_info)
