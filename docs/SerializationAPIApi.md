@@ -12,22 +12,25 @@ Method | HTTP request | Description
 Returns an appropriate serialization based on the specified format (see SerializationFormat)
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SerializationAPIApi()
-aas_ids = ['aas_ids_example'] # list[str] | The Asset Administration Shells' unique ids (UTF8-BASE64-URL-encoded) (optional)
-submodel_ids = ['submodel_ids_example'] # list[str] | The Submodels' unique ids (UTF8-BASE64-URL-encoded) (optional)
-include_concept_descriptions = true # bool | Include Concept Descriptions? (optional) (default to true)
+api_instance = aas_api_python_client.SerializationAPIApi()
+aas_ids = [
+    'aas_ids_example']  # list[str] | The Asset Administration Shells' unique ids (UTF8-BASE64-URL-encoded) (optional)
+submodel_ids = ['submodel_ids_example']  # list[str] | The Submodels' unique ids (UTF8-BASE64-URL-encoded) (optional)
+include_concept_descriptions = true  # bool | Include Concept Descriptions? (optional) (default to true)
 
 try:
     # Returns an appropriate serialization based on the specified format (see SerializationFormat)
-    api_response = api_instance.generate_serialization_by_ids(aas_ids=aas_ids, submodel_ids=submodel_ids, include_concept_descriptions=include_concept_descriptions)
+    api_response = api_instance.generate_serialization_by_ids(aas_ids=aas_ids, submodel_ids=submodel_ids,
+                                                              include_concept_descriptions=include_concept_descriptions)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SerializationAPIApi->generate_serialization_by_ids: %s\n" % e)

@@ -12,15 +12,16 @@ Method | HTTP request | Description
 Returns the self-describing information of a network resource (ServiceDescription)
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.DescriptionAPIApi()
+api_instance = aas_api_python_client.DescriptionAPIApi()
 
 try:
     # Returns the self-describing information of a network resource (ServiceDescription)

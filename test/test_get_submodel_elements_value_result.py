@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.get_submodel_elements_value_result import GetSubmodelElementsValueResult  # noqa: E501
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.models.get_submodel_elements_value_result import GetSubmodelElementsValueResult  # noqa: E501
+from aas_api_python_client.rest import ApiException
 
 
 class TestGetSubmodelElementsValueResult(unittest.TestCase):

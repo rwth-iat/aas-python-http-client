@@ -16,16 +16,17 @@ Method | HTTP request | Description
 Deletes a specific AASX package from the server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AASXFileServerAPIApi()
-package_id = 'B' # str | The package Id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AASXFileServerAPIApi()
+package_id = 'B'  # str | The package Id (UTF8-BASE64-URL-encoded)
 
 try:
     # Deletes a specific AASX package from the server
@@ -61,16 +62,17 @@ No authorization required
 Returns a specific AASX package from the server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AASXFileServerAPIApi()
-package_id = 'B' # str | The package Id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AASXFileServerAPIApi()
+package_id = 'B'  # str | The package Id (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns a specific AASX package from the server
@@ -107,18 +109,19 @@ No authorization required
 Returns a list of available AASX packages at the server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AASXFileServerAPIApi()
-aas_id = 'B' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded) (optional)
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+api_instance = aas_api_python_client.AASXFileServerAPIApi()
+aas_id = 'B'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded) (optional)
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
 
 try:
     # Returns a list of available AASX packages at the server
@@ -157,18 +160,19 @@ No authorization required
 Stores the AASX package at the server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AASXFileServerAPIApi()
-aas_ids = ['aas_ids_example'] # list[str] | 
-file = 'file_example' # str | 
-file_name = 'file_name_example' # str | 
+api_instance = aas_api_python_client.AASXFileServerAPIApi()
+aas_ids = ['aas_ids_example']  # list[str] | 
+file = 'file_example'  # str | 
+file_name = 'file_name_example'  # str | 
 
 try:
     # Stores the AASX package at the server
@@ -207,19 +211,20 @@ No authorization required
 Updates the AASX package at the server
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AASXFileServerAPIApi()
-aas_ids = ['aas_ids_example'] # list[str] | 
-file = 'file_example' # str | 
-file_name = 'file_name_example' # str | 
-package_id = 'B' # str | The package Id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AASXFileServerAPIApi()
+aas_ids = ['aas_ids_example']  # list[str] | 
+file = 'file_example'  # str | 
+file_name = 'file_name_example'  # str | 
+package_id = 'B'  # str | The package Id (UTF8-BASE64-URL-encoded)
 
 try:
     # Updates the AASX package at the server

@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.key_types import KeyTypes  # noqa: E501
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.models.key_types import KeyTypes  # noqa: E501
+from aas_api_python_client.rest import ApiException
 
 
 class TestKeyTypes(unittest.TestCase):

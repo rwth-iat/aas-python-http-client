@@ -47,16 +47,17 @@ Method | HTTP request | Description
 Deletes file content of an existing submodel element at a specified path within submodel elements hierarchy
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Deletes file content of an existing submodel element at a specified path within submodel elements hierarchy
@@ -92,16 +93,17 @@ No authorization required
 Deletes a submodel element at a specified path within the submodel elements hierarchy
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Deletes a submodel element at a specified path within the submodel elements hierarchy
@@ -137,19 +139,20 @@ No authorization required
 Returns all submodel elements including their hierarchy
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
-extent = 'withoutBlobValue' # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+extent = 'withoutBlobValue'  # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
 
 try:
     # Returns all submodel elements including their hierarchy
@@ -189,18 +192,19 @@ No authorization required
 Returns the metadata attributes of all submodel elements including their hierarchy
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
 try:
     # Returns the metadata attributes of all submodel elements including their hierarchy
@@ -239,18 +243,19 @@ No authorization required
 Returns all submodel elements including their hierarchy in the Path notation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
 try:
     # Returns all submodel elements including their hierarchy in the Path notation
@@ -289,18 +294,19 @@ No authorization required
 Returns the References of all submodel elements
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Returns the References of all submodel elements
@@ -339,23 +345,25 @@ No authorization required
 Returns all submodel elements including their hierarchy in the ValueOnly representation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
-extent = 'withoutBlobValue' # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+extent = 'withoutBlobValue'  # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
 
 try:
     # Returns all submodel elements including their hierarchy in the ValueOnly representation
-    api_response = api_instance.get_all_submodel_elements_value_only(limit=limit, cursor=cursor, level=level, extent=extent)
+    api_response = api_instance.get_all_submodel_elements_value_only(limit=limit, cursor=cursor, level=level,
+                                                                     extent=extent)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling SubmodelAPIApi->get_all_submodel_elements_value_only: %s\n" % e)
@@ -391,16 +399,17 @@ No authorization required
 Downloads file content from a specific submodel element from the Submodel at a specified path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Downloads file content from a specific submodel element from the Submodel at a specified path
@@ -437,17 +446,18 @@ No authorization required
 Returns the Operation result of an asynchronous invoked Operation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-handle_id = 'handle_id_example' # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+handle_id = 'handle_id_example'  # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns the Operation result of an asynchronous invoked Operation
@@ -485,17 +495,18 @@ No authorization required
 Returns the value of the Operation result of an asynchronous invoked Operation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-handle_id = 'handle_id_example' # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+handle_id = 'handle_id_example'  # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns the value of the Operation result of an asynchronous invoked Operation
@@ -533,17 +544,18 @@ No authorization required
 Returns the Operation status of an asynchronous invoked Operation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-handle_id = 'handle_id_example' # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+handle_id = 'handle_id_example'  # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns the Operation status of an asynchronous invoked Operation
@@ -581,17 +593,18 @@ No authorization required
 Returns the Submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
-extent = 'withoutBlobValue' # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+extent = 'withoutBlobValue'  # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
 
 try:
     # Returns the Submodel
@@ -629,18 +642,19 @@ No authorization required
 Returns a specific submodel element from the Submodel at a specified path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
-extent = 'withoutBlobValue' # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+extent = 'withoutBlobValue'  # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
 
 try:
     # Returns a specific submodel element from the Submodel at a specified path
@@ -679,17 +693,18 @@ No authorization required
 Returns the matadata attributes of a specific submodel element from the Submodel at a specified path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
 
 try:
     # Returns the matadata attributes of a specific submodel element from the Submodel at a specified path
@@ -727,17 +742,18 @@ No authorization required
 Returns a specific submodel element from the Submodel at a specified path in the Path notation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
 try:
     # Returns a specific submodel element from the Submodel at a specified path in the Path notation
@@ -775,17 +791,18 @@ No authorization required
 Returns the Referene of a specific submodel element from the Submodel at a specified path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Returns the Referene of a specific submodel element from the Submodel at a specified path
@@ -823,18 +840,19 @@ No authorization required
 Returns a specific submodel element from the Submodel at a specified path in the ValueOnly representation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
-extent = 'withoutBlobValue' # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+extent = 'withoutBlobValue'  # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
 
 try:
     # Returns a specific submodel element from the Submodel at a specified path in the ValueOnly representation
@@ -873,16 +891,17 @@ No authorization required
 Returns the metadata attributes of a specific Submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
 try:
     # Returns the metadata attributes of a specific Submodel
@@ -919,16 +938,17 @@ No authorization required
 Returns the Submodel in the Path notation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
 try:
     # Returns the Submodel in the Path notation
@@ -965,16 +985,17 @@ No authorization required
 Returns the Reference of the Submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Returns the Reference of the Submodel
@@ -1011,17 +1032,18 @@ No authorization required
 Returns the Submodel in the ValueOnly representation
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
-extent = 'withoutBlobValue' # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+extent = 'withoutBlobValue'  # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
 
 try:
     # Returns the Submodel in the ValueOnly representation
@@ -1059,17 +1081,18 @@ No authorization required
 Synchronously invokes an Operation at a specified path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.OperationRequest() # OperationRequest | Operation request object
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.OperationRequest()  # OperationRequest | Operation request object
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Synchronously invokes an Operation at a specified path
@@ -1107,17 +1130,18 @@ No authorization required
 Asynchronously invokes an Operation at a specified path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.OperationRequest() # OperationRequest | Operation request object
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.OperationRequest()  # OperationRequest | Operation request object
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Asynchronously invokes an Operation at a specified path
@@ -1154,17 +1178,18 @@ No authorization required
 Asynchronously invokes an Operation at a specified path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.OperationRequestValueOnly() # OperationRequestValueOnly | Operation request object
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.OperationRequestValueOnly()  # OperationRequestValueOnly | Operation request object
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Asynchronously invokes an Operation at a specified path
@@ -1201,17 +1226,18 @@ No authorization required
 Synchronously invokes an Operation at a specified path
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.OperationRequestValueOnly() # OperationRequestValueOnly | Operation request object
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.OperationRequestValueOnly()  # OperationRequestValueOnly | Operation request object
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Synchronously invokes an Operation at a specified path
@@ -1249,17 +1275,18 @@ No authorization required
 Updates the Submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.Submodel() # Submodel | Submodel object
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.Submodel()  # Submodel | Submodel object
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Updates the Submodel
@@ -1296,18 +1323,19 @@ No authorization required
 Updates an existing SubmodelElement
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.SubmodelElement() # SubmodelElement | SubmodelElement object
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.SubmodelElement()  # SubmodelElement | SubmodelElement object
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Updates an existing SubmodelElement
@@ -1345,20 +1373,21 @@ No authorization required
 Updates the metadata attributes an existing SubmodelElement
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.GetSubmodelElementsMetadataResult() # GetSubmodelElementsMetadataResult | Metadata attributes of the SubmodelElement
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.GetSubmodelElementsMetadataResult()  # GetSubmodelElementsMetadataResult | Metadata attributes of the SubmodelElement
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Updates the metadata attributes an existing SubmodelElement
@@ -1398,20 +1427,21 @@ No authorization required
 Updates the value of an existing SubmodelElement
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.GetSubmodelElementsValueResult() # GetSubmodelElementsValueResult | The SubmodelElement in its ValueOnly representation
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.GetSubmodelElementsValueResult()  # GetSubmodelElementsValueResult | The SubmodelElement in its ValueOnly representation
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Updates the value of an existing SubmodelElement
@@ -1451,17 +1481,18 @@ No authorization required
 Updates the metadata attributes of the Submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.SubmodelMetadata() # SubmodelMetadata | The metadata attributes of the Submodel object
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.SubmodelMetadata()  # SubmodelMetadata | The metadata attributes of the Submodel object
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Updates the metadata attributes of the Submodel
@@ -1498,17 +1529,18 @@ No authorization required
 Updates the values of the Submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.SubmodelValue() # SubmodelValue | Submodel object in its ValueOnly representation
-level = 'core' # str | Determines the structural depth of the respective resource content (optional) (default to core)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.SubmodelValue()  # SubmodelValue | Submodel object in its ValueOnly representation
+level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
 try:
     # Updates the values of the Submodel
@@ -1545,16 +1577,17 @@ No authorization required
 Creates a new submodel element
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.SubmodelElement() # SubmodelElement | Requested submodel element
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.SubmodelElement()  # SubmodelElement | Requested submodel element
 
 try:
     # Creates a new submodel element
@@ -1591,17 +1624,18 @@ No authorization required
 Creates a new submodel element at a specified path within submodel elements hierarchy
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.SubmodelElement() # SubmodelElement | Requested submodel element
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.SubmodelElement()  # SubmodelElement | Requested submodel element
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Creates a new submodel element at a specified path within submodel elements hierarchy
@@ -1639,18 +1673,19 @@ No authorization required
 Uploads file content to an existing submodel element at a specified path within submodel elements hierarchy
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-file_name = 'file_name_example' # str | 
-file = 'file_example' # str | 
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+file_name = 'file_name_example'  # str | 
+file = 'file_example'  # str | 
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
 try:
     # Uploads file content to an existing submodel element at a specified path within submodel elements hierarchy
@@ -1688,17 +1723,18 @@ No authorization required
 Updates the Submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.Submodel() # Submodel | Submodel object
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.Submodel()  # Submodel | Submodel object
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
 try:
     # Updates the Submodel
@@ -1735,18 +1771,19 @@ No authorization required
 Updates an existing submodel element at a specified path within submodel elements hierarchy
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelAPIApi()
-body = swagger_client.SubmodelElement() # SubmodelElement | Requested submodel element
-id_short_path = 'id_short_path_example' # str | IdShort path to the submodel element (dot-separated)
-level = 'deep' # str | Determines the structural depth of the respective resource content (optional) (default to deep)
+api_instance = aas_api_python_client.SubmodelAPIApi()
+body = aas_api_python_client.SubmodelElement()  # SubmodelElement | Requested submodel element
+id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
+level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
 try:
     # Updates an existing submodel element at a specified path within submodel elements hierarchy

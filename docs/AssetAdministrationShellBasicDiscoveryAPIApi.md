@@ -15,16 +15,17 @@ Method | HTTP request | Description
 Deletes all specific Asset identifiers linked to an Asset Administration Shell to edit discoverable content
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellBasicDiscoveryAPIApi()
-aas_identifier = 'aas_identifier_example' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellBasicDiscoveryAPIApi()
+aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Deletes all specific Asset identifiers linked to an Asset Administration Shell to edit discoverable content
@@ -60,25 +61,29 @@ No authorization required
 Returns a list of Asset Administration Shell ids linked to specific Asset identifiers
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellBasicDiscoveryAPIApi()
-asset_ids = ['asset_ids_example'] # list[str] | A list of specific Asset identifiers. Each Asset identifier is a base64-url-encoded [SpecificAssetId](https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0.1#/components/schemas/SpecificAssetId) (optional)
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+api_instance = aas_api_python_client.AssetAdministrationShellBasicDiscoveryAPIApi()
+asset_ids = [
+    'asset_ids_example']  # list[str] | A list of specific Asset identifiers. Each Asset identifier is a base64-url-encoded [SpecificAssetId](https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0.1#/components/schemas/SpecificAssetId) (optional)
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
 
 try:
     # Returns a list of Asset Administration Shell ids linked to specific Asset identifiers
-    api_response = api_instance.get_all_asset_administration_shell_ids_by_asset_link(asset_ids=asset_ids, limit=limit, cursor=cursor)
+    api_response = api_instance.get_all_asset_administration_shell_ids_by_asset_link(asset_ids=asset_ids, limit=limit,
+                                                                                     cursor=cursor)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellBasicDiscoveryAPIApi->get_all_asset_administration_shell_ids_by_asset_link: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellBasicDiscoveryAPIApi->get_all_asset_administration_shell_ids_by_asset_link: %s\n" % e)
 ```
 
 ### Parameters
@@ -110,16 +115,17 @@ No authorization required
 Returns a list of specific Asset identifiers based on an Asset Administration Shell id to edit discoverable content
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellBasicDiscoveryAPIApi()
-aas_identifier = 'aas_identifier_example' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellBasicDiscoveryAPIApi()
+aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns a list of specific Asset identifiers based on an Asset Administration Shell id to edit discoverable content
@@ -156,17 +162,18 @@ No authorization required
 Creates specific Asset identifiers linked to an Asset Administration Shell to edit discoverable content
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellBasicDiscoveryAPIApi()
-body = [swagger_client.SpecificAssetId()] # list[SpecificAssetId] | A list of specific Asset identifiers
-aas_identifier = 'aas_identifier_example' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellBasicDiscoveryAPIApi()
+body = [aas_api_python_client.SpecificAssetId()]  # list[SpecificAssetId] | A list of specific Asset identifiers
+aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Creates specific Asset identifiers linked to an Asset Administration Shell to edit discoverable content

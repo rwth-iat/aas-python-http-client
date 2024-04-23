@@ -16,16 +16,17 @@ Method | HTTP request | Description
 Deletes a Concept Description
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConceptDescriptionRepositoryAPIApi()
-cd_identifier = 'B' # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
+cd_identifier = 'B'  # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Deletes a Concept Description
@@ -61,24 +62,27 @@ No authorization required
 Returns all Concept Descriptions
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConceptDescriptionRepositoryAPIApi()
-id_short = 'id_short_example' # str | The Concept Description’s IdShort (optional)
-is_case_of = 'B' # str | IsCaseOf reference (UTF8-BASE64-URL-encoded) (optional)
-data_specification_ref = 'B' # str | DataSpecification reference (UTF8-BASE64-URL-encoded) (optional)
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
+id_short = 'id_short_example'  # str | The Concept Description’s IdShort (optional)
+is_case_of = 'B'  # str | IsCaseOf reference (UTF8-BASE64-URL-encoded) (optional)
+data_specification_ref = 'B'  # str | DataSpecification reference (UTF8-BASE64-URL-encoded) (optional)
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
 
 try:
     # Returns all Concept Descriptions
-    api_response = api_instance.get_all_concept_descriptions(id_short=id_short, is_case_of=is_case_of, data_specification_ref=data_specification_ref, limit=limit, cursor=cursor)
+    api_response = api_instance.get_all_concept_descriptions(id_short=id_short, is_case_of=is_case_of,
+                                                             data_specification_ref=data_specification_ref, limit=limit,
+                                                             cursor=cursor)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ConceptDescriptionRepositoryAPIApi->get_all_concept_descriptions: %s\n" % e)
@@ -115,16 +119,17 @@ No authorization required
 Returns a specific Concept Description
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConceptDescriptionRepositoryAPIApi()
-cd_identifier = 'B' # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
+cd_identifier = 'B'  # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns a specific Concept Description
@@ -161,16 +166,17 @@ No authorization required
 Creates a new Concept Description
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConceptDescriptionRepositoryAPIApi()
-body = swagger_client.ConceptDescription() # ConceptDescription | Concept Description object
+api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
+body = aas_api_python_client.ConceptDescription()  # ConceptDescription | Concept Description object
 
 try:
     # Creates a new Concept Description
@@ -207,17 +213,18 @@ No authorization required
 Updates an existing Concept Description
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.ConceptDescriptionRepositoryAPIApi()
-body = swagger_client.ConceptDescription() # ConceptDescription | Concept Description object
-cd_identifier = 'B' # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
+body = aas_api_python_client.ConceptDescription()  # ConceptDescription | Concept Description object
+cd_identifier = 'B'  # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Updates an existing Concept Description

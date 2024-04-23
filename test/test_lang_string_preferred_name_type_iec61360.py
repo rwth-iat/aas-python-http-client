@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import swagger_client
-from swagger_client.models.lang_string_preferred_name_type_iec61360 import LangStringPreferredNameTypeIec61360  # noqa: E501
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.models.lang_string_preferred_name_type_iec61360 import LangStringPreferredNameTypeIec61360  # noqa: E501
+from aas_api_python_client.rest import ApiException
 
 
 class TestLangStringPreferredNameTypeIec61360(unittest.TestCase):

@@ -21,22 +21,24 @@ Method | HTTP request | Description
 Deletes an Asset Administration Shell Descriptor, i.e. de-registers an AAS
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-aas_identifier = 'B' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+aas_identifier = 'B'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Deletes an Asset Administration Shell Descriptor, i.e. de-registers an AAS
     api_instance.delete_asset_administration_shell_descriptor_by_id(aas_identifier)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->delete_asset_administration_shell_descriptor_by_id: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->delete_asset_administration_shell_descriptor_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -66,23 +68,25 @@ No authorization required
 Deletes a Submodel Descriptor, i.e. de-registers a submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-aas_identifier = 'aas_identifier_example' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
-submodel_identifier = 'submodel_identifier_example' # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Deletes a Submodel Descriptor, i.e. de-registers a submodel
     api_instance.delete_submodel_descriptor_by_id_through_superpath(aas_identifier, submodel_identifier)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->delete_submodel_descriptor_by_id_through_superpath: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->delete_submodel_descriptor_by_id_through_superpath: %s\n" % e)
 ```
 
 ### Parameters
@@ -113,26 +117,30 @@ No authorization required
 Returns all Asset Administration Shell Descriptors
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-asset_kind = swagger_client.AssetKind() # AssetKind | The Asset's kind (Instance or Type) (optional)
-asset_type = 'asset_type_example' # str | The Asset's type (UTF8-BASE64-URL-encoded) (optional)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+asset_kind = aas_api_python_client.AssetKind()  # AssetKind | The Asset's kind (Instance or Type) (optional)
+asset_type = 'asset_type_example'  # str | The Asset's type (UTF8-BASE64-URL-encoded) (optional)
 
 try:
     # Returns all Asset Administration Shell Descriptors
-    api_response = api_instance.get_all_asset_administration_shell_descriptors(limit=limit, cursor=cursor, asset_kind=asset_kind, asset_type=asset_type)
+    api_response = api_instance.get_all_asset_administration_shell_descriptors(limit=limit, cursor=cursor,
+                                                                               asset_kind=asset_kind,
+                                                                               asset_type=asset_type)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->get_all_asset_administration_shell_descriptors: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->get_all_asset_administration_shell_descriptors: %s\n" % e)
 ```
 
 ### Parameters
@@ -165,25 +173,28 @@ No authorization required
 Returns all Submodel Descriptors
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-aas_identifier = 'aas_identifier_example' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
 
 try:
     # Returns all Submodel Descriptors
-    api_response = api_instance.get_all_submodel_descriptors_through_superpath(aas_identifier, limit=limit, cursor=cursor)
+    api_response = api_instance.get_all_submodel_descriptors_through_superpath(aas_identifier, limit=limit,
+                                                                               cursor=cursor)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->get_all_submodel_descriptors_through_superpath: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->get_all_submodel_descriptors_through_superpath: %s\n" % e)
 ```
 
 ### Parameters
@@ -215,23 +226,25 @@ No authorization required
 Returns a specific Asset Administration Shell Descriptor
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-aas_identifier = 'B' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+aas_identifier = 'B'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns a specific Asset Administration Shell Descriptor
     api_response = api_instance.get_asset_administration_shell_descriptor_by_id(aas_identifier)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->get_asset_administration_shell_descriptor_by_id: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->get_asset_administration_shell_descriptor_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -261,24 +274,26 @@ No authorization required
 Returns a specific Submodel Descriptor
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-aas_identifier = 'aas_identifier_example' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
-submodel_identifier = 'submodel_identifier_example' # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns a specific Submodel Descriptor
     api_response = api_instance.get_submodel_descriptor_by_id_through_superpath(aas_identifier, submodel_identifier)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->get_submodel_descriptor_by_id_through_superpath: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->get_submodel_descriptor_by_id_through_superpath: %s\n" % e)
 ```
 
 ### Parameters
@@ -309,23 +324,25 @@ No authorization required
 Creates a new Asset Administration Shell Descriptor, i.e. registers an AAS
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-body = swagger_client.AssetAdministrationShellDescriptor() # AssetAdministrationShellDescriptor | Asset Administration Shell Descriptor object
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+body = aas_api_python_client.AssetAdministrationShellDescriptor()  # AssetAdministrationShellDescriptor | Asset Administration Shell Descriptor object
 
 try:
     # Creates a new Asset Administration Shell Descriptor, i.e. registers an AAS
     api_response = api_instance.post_asset_administration_shell_descriptor(body)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->post_asset_administration_shell_descriptor: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->post_asset_administration_shell_descriptor: %s\n" % e)
 ```
 
 ### Parameters
@@ -355,24 +372,26 @@ No authorization required
 Creates a new Submodel Descriptor, i.e. registers a submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-body = swagger_client.SubmodelDescriptor() # SubmodelDescriptor | Submodel Descriptor object
-aas_identifier = 'aas_identifier_example' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+body = aas_api_python_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
+aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Creates a new Submodel Descriptor, i.e. registers a submodel
     api_response = api_instance.post_submodel_descriptor_through_superpath(body, aas_identifier)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->post_submodel_descriptor_through_superpath: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->post_submodel_descriptor_through_superpath: %s\n" % e)
 ```
 
 ### Parameters
@@ -403,23 +422,25 @@ No authorization required
 Updates an existing Asset Administration Shell Descriptor
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-body = swagger_client.AssetAdministrationShellDescriptor() # AssetAdministrationShellDescriptor | Asset Administration Shell Descriptor object
-aas_identifier = 'B' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+body = aas_api_python_client.AssetAdministrationShellDescriptor()  # AssetAdministrationShellDescriptor | Asset Administration Shell Descriptor object
+aas_identifier = 'B'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Updates an existing Asset Administration Shell Descriptor
     api_instance.put_asset_administration_shell_descriptor_by_id(body, aas_identifier)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->put_asset_administration_shell_descriptor_by_id: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->put_asset_administration_shell_descriptor_by_id: %s\n" % e)
 ```
 
 ### Parameters
@@ -450,24 +471,26 @@ No authorization required
 Updates an existing Submodel Descriptor
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.AssetAdministrationShellRegistryAPIApi()
-body = swagger_client.SubmodelDescriptor() # SubmodelDescriptor | Submodel Descriptor object
-aas_identifier = 'aas_identifier_example' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
-submodel_identifier = 'submodel_identifier_example' # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+body = aas_api_python_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
+aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
+submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Updates an existing Submodel Descriptor
     api_instance.put_submodel_descriptor_by_id_through_superpath(body, aas_identifier, submodel_identifier)
 except ApiException as e:
-    print("Exception when calling AssetAdministrationShellRegistryAPIApi->put_submodel_descriptor_by_id_through_superpath: %s\n" % e)
+    print(
+        "Exception when calling AssetAdministrationShellRegistryAPIApi->put_submodel_descriptor_by_id_through_superpath: %s\n" % e)
 ```
 
 ### Parameters

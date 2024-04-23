@@ -16,16 +16,17 @@ Method | HTTP request | Description
 Deletes a Submodel Descriptor, i.e. de-registers a submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelRegistryAPIApi()
-submodel_identifier = 'submodel_identifier_example' # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
+submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Deletes a Submodel Descriptor, i.e. de-registers a submodel
@@ -61,17 +62,18 @@ No authorization required
 Returns all Submodel Descriptors
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelRegistryAPIApi()
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
+limit = 56  # int | The maximum number of elements in the response array (optional)
+cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
 
 try:
     # Returns all Submodel Descriptors
@@ -109,16 +111,17 @@ No authorization required
 Returns a specific Submodel Descriptor
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelRegistryAPIApi()
-submodel_identifier = 'submodel_identifier_example' # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
+submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Returns a specific Submodel Descriptor
@@ -155,16 +158,17 @@ No authorization required
 Creates a new Submodel Descriptor, i.e. registers a submodel
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelRegistryAPIApi()
-body = swagger_client.SubmodelDescriptor() # SubmodelDescriptor | Submodel Descriptor object
+api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
+body = aas_api_python_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
 
 try:
     # Creates a new Submodel Descriptor, i.e. registers a submodel
@@ -201,17 +205,18 @@ No authorization required
 Updates an existing Submodel Descriptor
 
 ### Example
+
 ```python
 from __future__ import print_function
 import time
-import swagger_client
-from swagger_client.rest import ApiException
+import aas_api_python_client
+from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = swagger_client.SubmodelRegistryAPIApi()
-body = swagger_client.SubmodelDescriptor() # SubmodelDescriptor | Submodel Descriptor object
-submodel_identifier = 'submodel_identifier_example' # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
+api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
+body = aas_api_python_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
+submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
     # Updates an existing Submodel Descriptor
