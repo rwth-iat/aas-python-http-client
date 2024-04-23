@@ -143,7 +143,7 @@ class ApiClient(object):
             body = self.sanitize_for_serialization(body)
 
         # request url
-        url = self.configuration.host + resource_path + "?_up=QWxiZXJ0OkFsYg=="
+        url = self.configuration.host + resource_path
 
         # perform request and return response
         response_data = self.request(
@@ -217,14 +217,25 @@ class ApiClient(object):
         if response_type == "file":
             return self.__deserialize_file(response)
 
-        # fetch data from response object
-        data = json.loads(response.data.decode('utf-8'), cls=StrictAASFromJsonDecoder)
-        # try:
-        #     data = json.loads(response.data.decode('utf-8'), cls=StrictAASFromJsonDecoder)
-        # except ValueError:
-        #     data = response.data
+        data = self.__deserialize_with_basyx_json_decoder(response, response_type)
 
         return self.__deserialize(data, response_type)
+
+
+    def __deserialize_with_basyx_json_decoder(self, response, response_type):
+        decoded_response_data = response.data.decode('utf-8')
+        raw_data = json.loads(decoded_response_data)
+
+        if isinstance(raw_data, dict) and "modelType" not in raw_data:
+            raw_data["modelType"] = response_type
+            try:
+                data = json.loads(json.dumps(raw_data), cls=StrictAASFromJsonDecoder)
+            except TypeError:
+                data = json.loads(decoded_response_data, cls=StrictAASFromJsonDecoder)
+        else:
+            data = json.loads(decoded_response_data, cls=StrictAASFromJsonDecoder)
+        return data
+
 
     def __deserialize(self, data, klass):
         """Deserializes dict, list, str into an object.
@@ -238,6 +249,9 @@ class ApiClient(object):
             return None
 
         if type(klass) == str:
+            if klass in str(type(data)):
+                return data
+
             if klass.startswith('list['):
                 sub_kls = re.match(r'list\[(.*)\]', klass).group(1)
                 return [self.__deserialize(sub_data, sub_kls)
@@ -263,7 +277,7 @@ class ApiClient(object):
         elif klass == datetime.datetime:
             return self.__deserialize_datatime(data)
         else:
-            return data
+            return self.__deserialize_model(data, klass)
 
     def call_api(self, resource_path, method,
                  path_params=None, query_params=None, header_params=None,
@@ -591,3 +605,37 @@ class ApiClient(object):
 
     def __hasattr(self, object, name):
             return name in object.__class__.__dict__
+
+    def __deserialize_model(self, data, klass):
+        """Deserializes list or dict to model.
+
+        :param data: dict, list.
+        :param klass: class literal.
+        :return: model object.
+        """
+
+        if not klass.swagger_types and not self.__hasattr(klass, 'get_real_child_model'):
+            return data
+
+        kwargs = {}
+        if klass.swagger_types is not None:
+            for attr, attr_type in six.iteritems(klass.swagger_types):
+                if (data is not None and
+                        klass.attribute_map[attr] in data and
+                        isinstance(data, (list, dict))):
+                    value = data[klass.attribute_map[attr]]
+                    kwargs[attr] = self.__deserialize(value, attr_type)
+
+        instance = klass(**kwargs)
+
+        if (isinstance(instance, dict) and
+                klass.swagger_types is not None and
+                isinstance(data, dict)):
+            for key, value in data.items():
+                if key not in klass.swagger_types:
+                    instance[key] = value
+        if self.__hasattr(instance, 'get_real_child_model'):
+            klass_name = instance.get_real_child_model(data)
+            if klass_name:
+                instance = self.__deserialize(data, klass_name)
+        return instance
