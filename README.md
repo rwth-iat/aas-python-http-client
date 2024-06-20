@@ -55,6 +55,9 @@ import aas_api_python_client
 from aas_api_python_client.rest import ApiException
 from pprint import pprint
 
+configuration = Configuration()
+configuration.host = "http://localhost:8080/api/v3.0"
+
 # create an instance of the API class
 api_instance = aas_api_python_client.AASXFileServerAPIApi(aas_api_python_client.ApiClient(configuration))
 package_id = 'B' # str | The package Id (UTF8-BASE64-URL-encoded)
