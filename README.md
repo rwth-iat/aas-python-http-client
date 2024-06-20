@@ -49,74 +49,53 @@ import aas_api_python_client
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
-from __future__ import print_function
-import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
-from pprint import pprint
+from aas_api_python_client import ApiClient, Configuration, AssetAdministrationShellRepositoryAPIApi, SubmodelRepositoryAPIApi
+from aas_api_python_client.util import string_to_base64url
+from basyx.aas import model
 
 configuration = Configuration()
 configuration.host = "http://localhost:8080/api/v3.0"
 
-# create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi(aas_api_python_client.ApiClient(configuration))
-package_id = 'B' # str | The package Id (UTF8-BASE64-URL-encoded)
+api_client = ApiClient(configuration=configuration)
 
-try:
-    # Deletes a specific AASX package from the server
-    api_instance.delete_aasxby_package_id(package_id)
-except ApiException as e:
-    print("Exception when calling AASXFileServerAPIApi->delete_aasxby_package_id: %s\n" % e)
+aasRepoClient = AssetAdministrationShellRepositoryAPIApi(api_client=api_client)
 
-# create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi(aas_api_python_client.ApiClient(configuration))
-package_id = 'B' # str | The package Id (UTF8-BASE64-URL-encoded)
+# query all asset administration shells
+all_aas = aasRepoClient.get_all_asset_administration_shells().result
+print(all_aas)
 
-try:
-    # Returns a specific AASX package from the server
-    api_response = api_instance.get_aasxby_package_id(package_id)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AASXFileServerAPIApi->get_aasxby_package_id: %s\n" % e)
+# query specific asset administration shell
+aas = aasRepoClient.get_asset_administration_shell_by_id(string_to_base64url('https://acplt.org/Test_AssetAdministrationShell'))
+print(aas)
 
-# create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi(aas_api_python_client.ApiClient(configuration))
-aas_id = 'B' # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded) (optional)
-limit = 56 # int | The maximum number of elements in the response array (optional)
-cursor = 'cursor_example' # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
+# query asset information
+aas_info = aasRepoClient.get_asset_information_aas_repository(string_to_base64url('https://acplt.org/Test_AssetAdministrationShell'))
+print(aas_info)
 
-try:
-    # Returns a list of available AASX packages at the server
-    api_response = api_instance.get_all_aasx_package_ids(aas_id=aas_id, limit=limit, cursor=cursor)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AASXFileServerAPIApi->get_all_aasx_package_ids: %s\n" % e)
+# create a new asset administration shell
+new_aas = model.AssetAdministrationShell(aas_info, "https://acplt.org/Test_AAS")
+aasRepoClient.post_asset_administration_shell(new_aas)
 
-# create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi(aas_api_python_client.ApiClient(configuration))
-aas_ids = ['aas_ids_example'] # list[str] | 
-file = 'file_example' # str | 
-file_name = 'file_name_example' # str | 
 
-try:
-    # Stores the AASX package at the server
-    api_response = api_instance.post_aasx_package(aas_ids, file, file_name)
-    pprint(api_response)
-except ApiException as e:
-    print("Exception when calling AASXFileServerAPIApi->post_aasx_package: %s\n" % e)
+submodelRepoClient = SubmodelRepositoryAPIApi(api_client=api_client)
 
-# create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi(aas_api_python_client.ApiClient(configuration))
-aas_ids = ['aas_ids_example'] # list[str] | 
-file = 'file_example' # str | 
-file_name = 'file_name_example' # str | 
-package_id = 'B' # str | The package Id (UTF8-BASE64-URL-encoded)
+# query all submodels
+all_submodels = submodelRepoClient.get_all_submodels().result
+print(all_submodels)
 
-try:
-    # Updates the AASX package at the server
-    api_instance.put_aasxby_package_id(aas_ids, file, file_name, package_id)
-except ApiException as e:
-    print("Exception when calling AASXFileServerAPIApi->put_aasxby_package_id: %s\n" % e)
+# modify a submodel
+test_submodel = all_submodels[0]
+test_submodel.id_short = "Test123"
+submodelRepoClient.put_submodel_by_id(test_submodel, string_to_base64url(test_submodel.id))
+
+# delete a submodel
+submodelRepoClient.delete_submodel_by_id(string_to_base64url(test_submodel.id))
+
+# create a new submodel
+new_submodel = model.Submodel("https://acplt.org/TestSubmodel")
+submodelRepoClient.post_submodel(new_submodel)
+
+
 ```
 
 ## Documentation for API Endpoints
