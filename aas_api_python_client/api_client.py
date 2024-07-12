@@ -634,7 +634,11 @@ class ApiClient(object):
         """
 
         if klass.__name__ in self.basyx_decoders:
-            data = self.basyx_decoders[klass.__name__](data)
+            data = json.loads(json.dumps(data), cls=StrictAASFromJsonDecoder)
+            try:
+                data = self.basyx_decoders[klass.__name__](data)
+            except Exception as e:
+                pass
             return data
 
         if not klass.swagger_types and not self.__hasattr(klass, 'get_real_child_model'):
