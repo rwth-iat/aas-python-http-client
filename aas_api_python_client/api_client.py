@@ -89,7 +89,6 @@ class ApiClient(object):
         # Get the return types of these methods
         method_return_types = {}
         for constructor_name, constructor in constructors:
-            print(constructor_name, str(constructor))
             try:
                 return_type = get_type_hints(constructor).get('return', 'Unknown')
             except NameError as e:
@@ -217,6 +216,18 @@ class ApiClient(object):
 
         if isinstance(obj, dict):
             obj_dict = obj
+            return {key: self.sanitize_for_serialization(val)
+                    for key, val in six.iteritems(obj_dict)}
+        elif (hasattr(aas_api_python_client.models, type(obj).__name__) and
+              getattr(aas_api_python_client.models, type(obj).__name__) is type(obj)):
+            # Convert model obj to dict except
+            # attributes `swagger_types`, `attribute_map`
+            # and attributes which value is not None.
+            # Convert attribute name to json key in
+            # model definition for request.
+            obj_dict = {obj.attribute_map[attr]: getattr(obj, attr)
+                        for attr, _ in six.iteritems(obj.swagger_types)
+                        if getattr(obj, attr) is not None}
             return {key: self.sanitize_for_serialization(val)
                     for key, val in six.iteritems(obj_dict)}
         else:
