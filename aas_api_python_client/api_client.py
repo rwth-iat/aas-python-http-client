@@ -11,16 +11,19 @@
 from __future__ import absolute_import
 
 import datetime
+import inspect
 import json
+import logging
 import mimetypes
 from multiprocessing.pool import ThreadPool
 import os
 import re
 import tempfile
+from typing import get_type_hints
 
 # python 2 and python 3 compatibility library
 import six
-from basyx.aas.adapter.json import StrictAASFromJsonDecoder, AASToJsonEncoder
+from basyx.aas.adapter.json import StrictAASFromJsonDecoder, AASToJsonEncoder, AASFromJsonDecoder
 from six.moves.urllib.parse import quote
 
 from aas_api_python_client.configuration import Configuration
@@ -74,10 +77,27 @@ class ApiClient(object):
         self.cookie = cookie
         # Set default User-Agent.
         self.user_agent = 'Swagger-Codegen/1.0.0/python'
+        self.basyx_decoders = self._get_basyx_decoder_funcs()
 
     def __del__(self):
         self.pool.close()
         self.pool.join()
+
+    def _get_basyx_decoder_funcs(self):
+        members = inspect.getmembers(AASFromJsonDecoder)
+        constructors = [member for member in members if member[0].startswith('_construct')]
+        # Get the return types of these methods
+        method_return_types = {}
+        for constructor_name, constructor in constructors:
+            print(constructor_name, str(constructor))
+            try:
+                return_type = get_type_hints(constructor).get('return', 'Unknown')
+            except NameError as e:
+                logging.error(f"Failed to get return type of method {constructor_name}: {e}")
+                return_type = 'Unknown'
+            return_type = return_type if return_type == 'Unknown' else return_type.__name__
+            method_return_types[return_type] = constructor
+        return method_return_types
 
     @property
     def user_agent(self):
@@ -217,29 +237,9 @@ class ApiClient(object):
         if response_type == "file":
             return self.__deserialize_file(response)
 
-        data = self.__deserialize_with_basyx_json_decoder(response, response_type)
+        data = json.loads(response.data.decode('utf-8'), cls=StrictAASFromJsonDecoder)
 
         return self.__deserialize(data, response_type)
-
-
-    def __deserialize_with_basyx_json_decoder(self, response, response_type):
-        decoded_response_data = response.data.decode('utf-8')
-        data = json.loads(decoded_response_data)
-
-        basyx_data = data["result"] if isinstance(data, dict) and "result" in data else data
-
-        if isinstance(basyx_data, dict) and "modelType" not in data:
-            basyx_data["modelType"] = response_type
-
-        basyx_data = json.loads(json.dumps(basyx_data), cls=StrictAASFromJsonDecoder)
-
-        if isinstance(data, dict) and "result" in data:
-            data["result"] = basyx_data
-        else:
-            data = basyx_data
-
-        return data
-
 
     def __deserialize(self, data, klass):
         """Deserializes dict, list, str into an object.
@@ -617,6 +617,10 @@ class ApiClient(object):
         :param klass: class literal.
         :return: model object.
         """
+
+        if klass.__name__ in self.basyx_decoders:
+            data = self.basyx_decoders[klass.__name__](data)
+            return data
 
         if not klass.swagger_types and not self.__hasattr(klass, 'get_real_child_model'):
             return data
