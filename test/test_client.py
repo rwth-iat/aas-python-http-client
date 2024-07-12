@@ -71,16 +71,16 @@ class AASClientTest(unittest.TestCase):
 
     # TODO: fix splitting of asset_id
     def test_get_all_aas_assetid_filtering(self):
-        asset_id = ("ew0KCQkJCQkJInNlbWFudGljSWQiOiB7DQoJCQkJCQkJInR5cGUiOiAiRXh0ZXJuYWxSZWZlcmVuY2UiLA0"
+        asset_ids = ("ew0KCQkJCQkJInNlbWFudGljSWQiOiB7DQoJCQkJCQkJInR5cGUiOiAiRXh0ZXJuYWxSZWZlcmVuY2UiLA0"
                     "KCQkJCQkJCSJrZXlzIjogWw0KCQkJCQkJCQl7DQoJCQkJCQkJCQkidHlwZSI6ICJHbG9iYWxSZWZlcmVuY2"
                     "UiLA0KCQkJCQkJCQkJInZhbHVlIjogImh0dHA6Ly9hY3BsdC5vcmcvU3BlY2lmaWNBc3NldElkLyINCgkJC"
                     "QkJCQkJfQ0KCQkJCQkJCV0NCgkJCQkJCX0sDQoJCQkJCQkibmFtZSI6ICJUZXN0S2V5IiwNCgkJCQkJCSJ2"
                     "YWx1ZSI6ICJUZXN0VmFsdWUiLA0KCQkJCQkJImV4dGVybmFsU3ViamVjdElkIjogew0KCQkJCQkJCSJ0eXB"
                     "lIjogIkV4dGVybmFsUmVmZXJlbmNlIiwNCgkJCQkJCQkia2V5cyI6IFsNCgkJCQkJCQkJew0KCQkJCQkJCQ"
                     "kJInR5cGUiOiAiR2xvYmFsUmVmZXJlbmNlIiwNCgkJCQkJCQkJCSJ2YWx1ZSI6ICJodHRwOi8vYWNwbHQub"
-                    "3JnL1NwZWNpZmljQXNzZXRJZC8iDQoJCQkJCQkJCX0NCgkJCQkJCQldDQoJCQkJCQl9DQoJCQkJCX0")
+                    "3JnL1NwZWNpZmljQXNzZXRJZC8iDQoJCQkJCQkJCX0NCgkJCQkJCQldDQoJCQkJCQl9DQoJCQkJCX0",)
         retrieved_aashels = self.aasRepoClient.get_all_asset_administration_shells(
-            asset_ids=asset_id)  # splits up asset_id, filtering does not work
+            asset_ids=asset_ids)  # splits up asset_id, filtering does not work
         aas_list = retrieved_aashels.result
         self.CHECKER.check_asset_administration_shell_equal(aas_list[0], self.example_aas)
         self.assertEqual(1, len(aas_list))
