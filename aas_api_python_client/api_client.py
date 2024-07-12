@@ -248,7 +248,11 @@ class ApiClient(object):
         if response_type == "file":
             return self.__deserialize_file(response)
 
-        data = json.loads(response.data.decode('utf-8'), cls=StrictAASFromJsonDecoder)
+        # fetch data from response object
+        try:
+            data = json.loads(response.data)
+        except ValueError:
+            data = response.data
 
         return self.__deserialize(data, response_type)
 
