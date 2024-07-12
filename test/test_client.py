@@ -92,7 +92,7 @@ class AASClientTest(unittest.TestCase):
             "Encoded data 1 is invalid base64url!")
         self._assert_api_exception(
             lambda: self.aasRepoClient.get_all_asset_administration_shells(
-                asset_ids="ew0KCQkJCQkJInNlbWFudGljSWQiOiB7DQoJCQkJCQkJInR5"), 422,
+                asset_ids=("ew0KCQkJCQkJInNlbWFudGljSWQiOiB7DQoJCQkJCQkJInR5",)), 422,
             # should be 422 isn't because filtering is not working
         )
 
