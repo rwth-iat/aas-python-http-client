@@ -145,8 +145,7 @@ class AASClientTest(unittest.TestCase):
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"))
         self.aasRepoClient.delete_asset_administration_shell_by_id(
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"))
-        retrieved_aas_parsed = AASClientTest._parse_object(object=retrieved_aas, encoder=AASToJsonEncoder)
-        self.aasRepoClient.post_asset_administration_shell(retrieved_aas_parsed)
+        self.aasRepoClient.post_asset_administration_shell(retrieved_aas)
         retrieved_aas_new = self.aasRepoClient.get_asset_administration_shell_by_id(
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"))
         self.CHECKER.check_asset_administration_shell_equal(retrieved_aas, retrieved_aas_new)
@@ -165,14 +164,13 @@ class AASClientTest(unittest.TestCase):
 
         self.aasRepoClient.delete_asset_administration_shell_by_id(
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"))
-        retrieved_aas_parsed = AASClientTest._parse_object(object=retrieved_aas, encoder=AASToJsonEncoder)
-        self.aasRepoClient.post_asset_administration_shell(retrieved_aas_parsed)
+        self.aasRepoClient.post_asset_administration_shell(retrieved_aas)
 
         self._assert_api_exception(
             lambda: self.aasRepoClient.post_asset_administration_shell("a"), 422,
             "Object 'a' is not of type AssetAdministrationShell!")
         self._assert_api_exception(
-            lambda: self.aasRepoClient.post_asset_administration_shell(retrieved_aas_parsed), 409,
+            lambda: self.aasRepoClient.post_asset_administration_shell(retrieved_aas), 409,
             "AssetAdministrationShell with Identifier "
             "https://acplt.org/Test_AssetAdministrationShell already exists!")
 
@@ -212,15 +210,11 @@ class AASClientTest(unittest.TestCase):
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"))
         # deserialization to model.Modelreference object is not happening
         submodel_reference = submodel_references.result[0]
-        submodel_reference.__class__ = model.ModelReference
-        submodel_reference_dump = AASToJsonEncoder._reference_to_json(submodel_reference)
-        submodel_reference_parsed = json.loads(submodel_reference_dump)
-        submodel_id = submodel_reference_parsed.get('value', None)
         self.aasRepoClient.delete_submodel_reference_by_id_aas_repository(
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"),
-            submodel_identifier=string_to_base64url(submodel_id))
+            submodel_identifier=string_to_base64url(submodel_reference.get_identifier()))
         self.aasRepoClient.post_submodel_reference_aas_repository(
-            body=submodel_reference_parsed, aas_identifier=string_to_base64url(
+            body=submodel_reference, aas_identifier=string_to_base64url(
                 "https://acplt.org/Test_AssetAdministrationShell"))
 
     def test_put_and_get_submodel(self):
@@ -410,10 +404,8 @@ class AASClientTest(unittest.TestCase):
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"),
             submodel_identifier=string_to_base64url(self.example_submodel.id),
             id_short_path="ExampleSubmodelCollection")
-        retrieved_submodel_element_parsed = AASClientTest._parse_object(object=retrieved_submodel_element,
-                                                                        encoder=AASToJsonEncoder)
         self.aasRepoClient.post_submodel_element_aas_repository(
-            body=retrieved_submodel_element_parsed, aas_identifier=string_to_base64url(
+            body=retrieved_submodel_element, aas_identifier=string_to_base64url(
                 "https://acplt.org/Test_AssetAdministrationShell"), submodel_identifier=string_to_base64url(
                 self.example_submodel.id))
         retrieved_submodel_element_new = self.aasRepoClient.get_submodel_element_by_path_aas_repository(
@@ -445,10 +437,8 @@ class AASClientTest(unittest.TestCase):
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"),
             submodel_identifier=string_to_base64url(self.example_submodel.id),
             id_short_path="ExampleSubmodelCollection")
-        retrieved_submodel_element_parsed = AASClientTest._parse_object(object=retrieved_submodel_element,
-                                                                        encoder=AASToJsonEncoder)
         self.aasRepoClient.post_submodel_element_aas_repository(
-            body=retrieved_submodel_element_parsed, aas_identifier=string_to_base64url(
+            body=retrieved_submodel_element, aas_identifier=string_to_base64url(
                 "https://acplt.org/Test_AssetAdministrationShell"), submodel_identifier=string_to_base64url(
                 self.example_submodel.id))
 
@@ -459,7 +449,7 @@ class AASClientTest(unittest.TestCase):
                     self.example_submodel.id)), 422, "Object 'a' is not of type SubmodelElement!")
         self._assert_api_exception(
             lambda: self.aasRepoClient.post_submodel_element_aas_repository(
-                body=retrieved_submodel_element_parsed, aas_identifier=string_to_base64url(
+                body=retrieved_submodel_element, aas_identifier=string_to_base64url(
                     "https://acplt.org/Test_AssetAdministrationShell"), submodel_identifier=string_to_base64url(
                     self.example_submodel.id)), 409,
             "SubmodelElement with idShort ExampleSubmodelCollection already exists"
@@ -471,10 +461,8 @@ class AASClientTest(unittest.TestCase):
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"),
             submodel_identifier=string_to_base64url(self.example_submodel.id),
             id_short_path="ExampleSubmodelCollection")
-        retrieved_submodel_element_parsed = AASClientTest._parse_object(object=retrieved_submodel_element,
-                                                                        encoder=AASToJsonEncoder)
         self.aasRepoClient.post_submodel_element_by_path_aas_repository(
-            body=retrieved_submodel_element_parsed, aas_identifier=string_to_base64url(
+            body=retrieved_submodel_element, aas_identifier=string_to_base64url(
                 "https://acplt.org/Test_AssetAdministrationShell"), submodel_identifier=string_to_base64url(
                 self.example_submodel.id), id_short_path="ExampleSubmodelCollection")
         retrieved_submodel_element_new = self.aasRepoClient.get_submodel_element_by_path_aas_repository(
@@ -493,10 +481,8 @@ class AASClientTest(unittest.TestCase):
             aas_identifier=string_to_base64url("https://acplt.org/Test_AssetAdministrationShell"),
             submodel_identifier=string_to_base64url(self.example_submodel.id),
             id_short_path="ExampleSubmodelCollection")
-        retrieved_submodel_element_parsed = AASClientTest._parse_object(object=retrieved_submodel_element,
-                                                                        encoder=AASToJsonEncoder)
         self.aasRepoClient.post_submodel_element_by_path_aas_repository(
-            body=retrieved_submodel_element_parsed, aas_identifier=string_to_base64url(
+            body=retrieved_submodel_element, aas_identifier=string_to_base64url(
                 "https://acplt.org/Test_AssetAdministrationShell"), submodel_identifier=string_to_base64url(
                 self.example_submodel.id), id_short_path="ExampleSubmodelCollection")
         self._assert_api_exception(
