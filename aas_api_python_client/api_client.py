@@ -224,16 +224,20 @@ class ApiClient(object):
 
     def __deserialize_with_basyx_json_decoder(self, response, response_type):
         decoded_response_data = response.data.decode('utf-8')
-        raw_data = json.loads(decoded_response_data)
+        data = json.loads(decoded_response_data)
 
-        if isinstance(raw_data, dict) and "modelType" not in raw_data:
-            raw_data["modelType"] = response_type
-            try:
-                data = json.loads(json.dumps(raw_data), cls=StrictAASFromJsonDecoder)
-            except TypeError:
-                data = json.loads(decoded_response_data, cls=StrictAASFromJsonDecoder)
+        basyx_data = data["result"] if isinstance(data, dict) and "result" in data else data
+
+        if isinstance(basyx_data, dict) and "modelType" not in data:
+            basyx_data["modelType"] = response_type
+
+        basyx_data = json.loads(json.dumps(basyx_data), cls=StrictAASFromJsonDecoder)
+
+        if isinstance(data, dict) and "result" in data:
+            data["result"] = basyx_data
         else:
-            data = json.loads(decoded_response_data, cls=StrictAASFromJsonDecoder)
+            data = basyx_data
+
         return data
 
 
