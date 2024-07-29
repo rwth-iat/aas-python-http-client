@@ -19,11 +19,12 @@ from multiprocessing.pool import ThreadPool
 import os
 import re
 import tempfile
-from typing import get_type_hints
+from typing import get_type_hints, Set
 
 # python 2 and python 3 compatibility library
 import six
 from basyx.aas.adapter.json import StrictAASFromJsonDecoder, AASToJsonEncoder, AASFromJsonDecoder
+from basyx.aas.model import ValueReferencePair
 from six.moves.urllib.parse import quote
 
 from aas_api_python_client.configuration import Configuration
@@ -92,8 +93,11 @@ class ApiClient(object):
             try:
                 return_type = get_type_hints(constructor).get('return', 'Unknown')
             except NameError as e:
-                logging.error(f"Failed to get return type of method {constructor_name}: {e}")
-                return_type = 'Unknown'
+                if constructor_name == "_construct_value_list":
+                    return_type = Set[ValueReferencePair]
+                else:
+                    logging.error(f"Failed to get return type of method {constructor_name}: {e}")
+                    return_type = 'Unknown'
             return_type = return_type if return_type == 'Unknown' else return_type.__name__
             method_return_types[return_type] = constructor
         return method_return_types
