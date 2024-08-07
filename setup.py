@@ -21,19 +21,25 @@ VERSION = "1.0.0"
 # prerequisite: setuptools
 # http://pypi.python.org/pypi/setuptools
 
-REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil"]
+REQUIRES = ["urllib3 >= 1.15", "six >= 1.10", "certifi", "python-dateutil", "basyx-python-sdk"]
 
 setup(
     name=NAME,
     version=VERSION,
-    description="DotAAS Part 2 | HTTP/REST | Entire API Collection",
-    author_email="info@idtwin.org",
-    url="",
-    keywords=["Swagger", "DotAAS Part 2 | HTTP/REST | Entire API Collection"],
+    description="Python Client for DotAAS Part 2 | HTTP/REST | Entire API Collection",
+    author_email="i.garmaev@iat.rwth-aachen.de",
+    url="https://github.com/rwth-iat/aas-python-http-client",
+    keywords=["Swagger", "DotAAS Part 2 | HTTP/REST | Entire API Collection", "AAS"],
     install_requires=REQUIRES,
-    packages=find_packages(),
+    packages=find_packages(exclude=["test", "test.*"]),
     include_package_data=True,
     long_description="""\
-    All APIs of the Specification of the [Specification of the Asset Administration Shell: Part 2](http://industrialdigitaltwin.org/en/content-hub) in one collection. Please not that this API is not intended to generate productive code but only for overview purposes.   Publisher: Industrial Digital Twin Association (IDTA) 2023\&quot;  # noqa: E501
-    """
+    Python Client for all APIs of the Specification of the [Specification of the Asset Administration Shell: Part 2](http://industrialdigitaltwin.org/en/content-hub) in one collection. Please not that this API is not intended to generate productive code but only for overview purposes.   Publisher: Industrial Digital Twin Association (IDTA) 2023\&quot;  # noqa: E501
+    """,
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent"
+    ],
+    python_requires='>=3.8'
 )
