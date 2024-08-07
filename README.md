@@ -19,7 +19,7 @@ Python 3.8+
 You can install the python package directly from Github
 
 ```sh
-pip install git+https://github.com/rwth-iat/aas-python-http-client.git
+pip install aas-python-http-client
 ```
 (you may need to run `pip` with root permission: `sudo pip install git+https://github.com/rwth-iat/aas-python-http-client.git`)
 
