@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import aas_api_python_client
-from aas_api_python_client.models.basic_event_element import BasicEventElement  # noqa: E501
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.models.basic_event_element import BasicEventElement  # noqa: E501
+from aas_python_http_client.rest import ApiException
 
 
 class TestBasicEventElement(unittest.TestCase):

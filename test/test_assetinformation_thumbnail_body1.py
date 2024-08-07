@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import aas_api_python_client
-from aas_api_python_client.models.assetinformation_thumbnail_body1 import AssetinformationThumbnailBody1  # noqa: E501
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.models.assetinformation_thumbnail_body1 import AssetinformationThumbnailBody1  # noqa: E501
+from aas_python_http_client.rest import ApiException
 
 
 class TestAssetinformationThumbnailBody1(unittest.TestCase):

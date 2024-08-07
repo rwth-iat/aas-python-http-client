@@ -1,6 +1,6 @@
-from aas_api_python_client import ApiClient, Configuration, AssetAdministrationShellRepositoryAPIApi
-from aas_api_python_client.util import string_to_base64url
-from aas_api_python_client.rest import ApiException
+from aas_python_http_client import ApiClient, Configuration, AssetAdministrationShellRepositoryAPIApi
+from aas_python_http_client.util import string_to_base64url
+from aas_python_http_client.rest import ApiException
 
 from basyx.aas.examples.data.example_aas import *
 from basyx.aas.adapter.json import AASToJsonEncoder, StrippedAASToJsonEncoder, StrictStrippedAASFromJsonDecoder

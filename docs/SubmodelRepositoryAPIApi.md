@@ -58,12 +58,12 @@ Deletes file content of an existing submodel element at a specified path within 
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
@@ -106,12 +106,12 @@ Deletes a Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -152,12 +152,12 @@ Deletes a submodel element at a specified path within the submodel elements hier
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
@@ -200,12 +200,12 @@ Returns the metadata attributes of all submodel elements including their hierarc
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
@@ -255,12 +255,12 @@ Returns all submodel elements including their hierarchy in the Path notation
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
@@ -309,12 +309,12 @@ Returns the References of all submodel elements
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
@@ -364,12 +364,12 @@ Returns all submodel elements including their hierarchy
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
@@ -420,12 +420,12 @@ Returns all submodel elements including their hierarchy in the ValueOnly represe
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
@@ -478,12 +478,12 @@ Returns all Submodels
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 semantic_id = 'semantic_id_example'  # str | The value of the semantic id reference (BASE64-URL-encoded) (optional)
 id_short = 'id_short_example'  # str | The Asset Administration Shell’s IdShort (optional)
 limit = 56  # int | The maximum number of elements in the response array (optional)
@@ -536,12 +536,12 @@ Returns the metadata attributes of all Submodels
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 semantic_id = 'semantic_id_example'  # str | The value of the semantic id reference (BASE64-URL-encoded) (optional)
 id_short = 'id_short_example'  # str | The Asset Administration Shell’s IdShort (optional)
 limit = 56  # int | The maximum number of elements in the response array (optional)
@@ -592,12 +592,12 @@ Returns all Submodels in the Path notation
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 semantic_id = 'semantic_id_example'  # str | The value of the semantic id reference (BASE64-URL-encoded) (optional)
 id_short = 'id_short_example'  # str | The Asset Administration Shell’s IdShort (optional)
 limit = 56  # int | The maximum number of elements in the response array (optional)
@@ -648,12 +648,12 @@ Returns the References for all Submodels
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 semantic_id = 'semantic_id_example'  # str | The value of the semantic id reference (BASE64-URL-encoded) (optional)
 id_short = 'id_short_example'  # str | The Asset Administration Shell’s IdShort (optional)
 limit = 56  # int | The maximum number of elements in the response array (optional)
@@ -704,12 +704,12 @@ Returns all Submodels in their ValueOnly representation
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 semantic_id = 'semantic_id_example'  # str | The value of the semantic id reference (BASE64-URL-encoded) (optional)
 id_short = 'id_short_example'  # str | The Asset Administration Shell’s IdShort (optional)
 limit = 56  # int | The maximum number of elements in the response array (optional)
@@ -762,12 +762,12 @@ Downloads file content from a specific submodel element from the Submodel at a s
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
@@ -811,12 +811,12 @@ Returns the Operation result of an asynchronous invoked Operation
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 handle_id = 'handle_id_example'  # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
@@ -862,12 +862,12 @@ Returns the Operation result of an asynchronous invoked Operation
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 handle_id = 'handle_id_example'  # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
@@ -915,12 +915,12 @@ Returns the Operation status of an asynchronous invoked Operation
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 handle_id = 'handle_id_example'  # str | The returned handle id of an operation’s asynchronous invocation used to request the current state of the operation’s execution (UTF8-BASE64-URL-encoded)
@@ -966,12 +966,12 @@ Returns a specific Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 extent = 'withoutBlobValue'  # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
@@ -1017,12 +1017,12 @@ Returns the metadata attributes of a specific Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
@@ -1066,12 +1066,12 @@ Returns a specific Submodel in the Path notation
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 
@@ -1115,12 +1115,12 @@ Returns the Reference of a specific Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -1162,12 +1162,12 @@ Returns a specific Submodel in the ValueOnly representation
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
 extent = 'withoutBlobValue'  # str | Determines to which extent the resource is being serialized (optional) (default to withoutBlobValue)
@@ -1213,12 +1213,12 @@ Returns the matadata attributes of a specific submodel element from the Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
@@ -1266,12 +1266,12 @@ Returns a specific submodel element from the Submodel at a specified path in the
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
@@ -1318,12 +1318,12 @@ Returns the Referene of a specific submodel element from the Submodel at a speci
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
@@ -1371,12 +1371,12 @@ Returns a specific submodel element from the Submodel at a specified path
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
@@ -1425,12 +1425,12 @@ Returns a specific submodel element from the Submodel at a specified path in the
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)
@@ -1481,13 +1481,13 @@ Asynchronously invokes an Operation at a specified path
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.OperationRequest()  # OperationRequest | Operation request object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.OperationRequest()  # OperationRequest | Operation request object
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
@@ -1531,13 +1531,13 @@ Asynchronously invokes an Operation at a specified path
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.OperationRequestValueOnly()  # OperationRequestValueOnly | Operation request object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.OperationRequestValueOnly()  # OperationRequestValueOnly | Operation request object
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
@@ -1584,13 +1584,13 @@ Synchronously invokes an Operation at a specified path
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.OperationRequest()  # OperationRequest | Operation request object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.OperationRequest()  # OperationRequest | Operation request object
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 _async = false  # bool | Determines whether an operation invocation is performed asynchronously or synchronously (optional) (default to false)
@@ -1637,13 +1637,13 @@ Synchronously invokes an Operation at a specified path
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.OperationRequestValueOnly()  # OperationRequestValueOnly | Operation request object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.OperationRequestValueOnly()  # OperationRequestValueOnly | Operation request object
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
@@ -1693,13 +1693,13 @@ Updates an existing Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.Submodel()  # Submodel | Submodel object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.Submodel()  # Submodel | Submodel object
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
@@ -1743,13 +1743,13 @@ Updates the metadata attributes of an existing Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.SubmodelMetadata()  # SubmodelMetadata | The metadata attributes of the Submodel object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.SubmodelMetadata()  # SubmodelMetadata | The metadata attributes of the Submodel object
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
@@ -1793,13 +1793,13 @@ Updates the values of an existing Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.SubmodelValue()  # SubmodelValue | Submodel object in its ValueOnly representation
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.SubmodelValue()  # SubmodelValue | Submodel object in its ValueOnly representation
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
 
@@ -1843,13 +1843,13 @@ Updates the metadata attributes an existing SubmodelElement
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.SubmodelElementMetadata()  # SubmodelElementMetadata | Metadata attributes of the SubmodelElement
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.SubmodelElementMetadata()  # SubmodelElementMetadata | Metadata attributes of the SubmodelElement
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
@@ -1897,13 +1897,13 @@ Updates an existing SubmodelElement
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.SubmodelElement()  # SubmodelElement | SubmodelElement object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.SubmodelElement()  # SubmodelElement | SubmodelElement object
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
@@ -1949,13 +1949,13 @@ Updates the value of an existing SubmodelElement
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.SubmodelElementValue()  # SubmodelElementValue | The SubmodelElement in its ValueOnly representation
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.SubmodelElementValue()  # SubmodelElementValue | The SubmodelElement in its ValueOnly representation
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'core'  # str | Determines the structural depth of the respective resource content (optional) (default to core)
@@ -2003,13 +2003,13 @@ Creates a new Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.Submodel()  # Submodel | Submodel object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.Submodel()  # Submodel | Submodel object
 
 try:
     # Creates a new Submodel
@@ -2050,13 +2050,13 @@ Creates a new submodel element at a specified path within submodel elements hier
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.SubmodelElement()  # SubmodelElement | Requested submodel element
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.SubmodelElement()  # SubmodelElement | Requested submodel element
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 
@@ -2101,13 +2101,13 @@ Creates a new submodel element
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.SubmodelElement()  # SubmodelElement | Requested submodel element
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.SubmodelElement()  # SubmodelElement | Requested submodel element
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -2150,12 +2150,12 @@ Uploads file content to an existing submodel element at a specified path within 
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
 file_name = 'file_name_example'  # str | 
 file = 'file_example'  # str | 
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
@@ -2202,13 +2202,13 @@ Updates an existing Submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.Submodel()  # Submodel | Submodel object
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.Submodel()  # Submodel | Submodel object
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -2250,13 +2250,13 @@ Updates an existing submodel element at a specified path within submodel element
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRepositoryAPIApi()
-body = aas_api_python_client.SubmodelElement()  # SubmodelElement | Requested submodel element
+api_instance = aas_python_http_client.SubmodelRepositoryAPIApi()
+body = aas_python_http_client.SubmodelElement()  # SubmodelElement | Requested submodel element
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 id_short_path = 'id_short_path_example'  # str | IdShort path to the submodel element (dot-separated)
 level = 'deep'  # str | Determines the structural depth of the respective resource content (optional) (default to deep)

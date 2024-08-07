@@ -19,12 +19,12 @@ Deletes all specific Asset identifiers linked to an Asset Administration Shell t
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellBasicDiscoveryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellBasicDiscoveryAPIApi()
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -65,12 +65,12 @@ Returns a list of Asset Administration Shell ids linked to specific Asset identi
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellBasicDiscoveryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellBasicDiscoveryAPIApi()
 asset_ids = [
     'asset_ids_example']  # list[str] | A list of specific Asset identifiers. Each Asset identifier is a base64-url-encoded [SpecificAssetId](https://api.swaggerhub.com/domains/Plattform_i40/Part1-MetaModel-Schemas/V3.0.1#/components/schemas/SpecificAssetId) (optional)
 limit = 56  # int | The maximum number of elements in the response array (optional)
@@ -119,12 +119,12 @@ Returns a list of specific Asset identifiers based on an Asset Administration Sh
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellBasicDiscoveryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellBasicDiscoveryAPIApi()
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -166,13 +166,13 @@ Creates specific Asset identifiers linked to an Asset Administration Shell to ed
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellBasicDiscoveryAPIApi()
-body = [aas_api_python_client.SpecificAssetId()]  # list[SpecificAssetId] | A list of specific Asset identifiers
+api_instance = aas_python_http_client.AssetAdministrationShellBasicDiscoveryAPIApi()
+body = [aas_python_http_client.SpecificAssetId()]  # list[SpecificAssetId] | A list of specific Asset identifiers
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:

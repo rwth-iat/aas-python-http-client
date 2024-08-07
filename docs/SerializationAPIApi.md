@@ -16,12 +16,12 @@ Returns an appropriate serialization based on the specified format (see Serializ
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SerializationAPIApi()
+api_instance = aas_python_http_client.SerializationAPIApi()
 aas_ids = [
     'aas_ids_example']  # list[str] | The Asset Administration Shells' unique ids (UTF8-BASE64-URL-encoded) (optional)
 submodel_ids = ['submodel_ids_example']  # list[str] | The Submodels' unique ids (UTF8-BASE64-URL-encoded) (optional)

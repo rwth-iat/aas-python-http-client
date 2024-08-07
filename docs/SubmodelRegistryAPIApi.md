@@ -20,12 +20,12 @@ Deletes a Submodel Descriptor, i.e. de-registers a submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
+api_instance = aas_python_http_client.SubmodelRegistryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -66,12 +66,12 @@ Returns all Submodel Descriptors
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
+api_instance = aas_python_http_client.SubmodelRegistryAPIApi()
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
 
@@ -115,12 +115,12 @@ Returns a specific Submodel Descriptor
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
+api_instance = aas_python_http_client.SubmodelRegistryAPIApi()
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -162,13 +162,13 @@ Creates a new Submodel Descriptor, i.e. registers a submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
-body = aas_api_python_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
+api_instance = aas_python_http_client.SubmodelRegistryAPIApi()
+body = aas_python_http_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
 
 try:
     # Creates a new Submodel Descriptor, i.e. registers a submodel
@@ -209,13 +209,13 @@ Updates an existing Submodel Descriptor
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.SubmodelRegistryAPIApi()
-body = aas_api_python_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
+api_instance = aas_python_http_client.SubmodelRegistryAPIApi()
+body = aas_python_http_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
 try:

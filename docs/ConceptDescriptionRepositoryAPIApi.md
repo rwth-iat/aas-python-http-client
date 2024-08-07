@@ -20,12 +20,12 @@ Deletes a Concept Description
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
+api_instance = aas_python_http_client.ConceptDescriptionRepositoryAPIApi()
 cd_identifier = 'B'  # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -66,12 +66,12 @@ Returns all Concept Descriptions
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
+api_instance = aas_python_http_client.ConceptDescriptionRepositoryAPIApi()
 id_short = 'id_short_example'  # str | The Concept Description’s IdShort (optional)
 is_case_of = 'B'  # str | IsCaseOf reference (UTF8-BASE64-URL-encoded) (optional)
 data_specification_ref = 'B'  # str | DataSpecification reference (UTF8-BASE64-URL-encoded) (optional)
@@ -123,12 +123,12 @@ Returns a specific Concept Description
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
+api_instance = aas_python_http_client.ConceptDescriptionRepositoryAPIApi()
 cd_identifier = 'B'  # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -170,13 +170,13 @@ Creates a new Concept Description
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
-body = aas_api_python_client.ConceptDescription()  # ConceptDescription | Concept Description object
+api_instance = aas_python_http_client.ConceptDescriptionRepositoryAPIApi()
+body = aas_python_http_client.ConceptDescription()  # ConceptDescription | Concept Description object
 
 try:
     # Creates a new Concept Description
@@ -217,13 +217,13 @@ Updates an existing Concept Description
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.ConceptDescriptionRepositoryAPIApi()
-body = aas_api_python_client.ConceptDescription()  # ConceptDescription | Concept Description object
+api_instance = aas_python_http_client.ConceptDescriptionRepositoryAPIApi()
+body = aas_python_http_client.ConceptDescription()  # ConceptDescription | Concept Description object
 cd_identifier = 'B'  # str | The Concept Description’s unique id (UTF8-BASE64-URL-encoded)
 
 try:

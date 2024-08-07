@@ -14,9 +14,9 @@ from __future__ import absolute_import
 
 import unittest
 
-import aas_api_python_client
-from aas_api_python_client.api.serialization_api_api import SerializationAPIApi  # noqa: E501
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.api.serialization_api_api import SerializationAPIApi  # noqa: E501
+from aas_python_http_client.rest import ApiException
 
 
 class TestSerializationAPIApi(unittest.TestCase):

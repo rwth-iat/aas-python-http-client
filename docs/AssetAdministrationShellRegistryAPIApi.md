@@ -25,12 +25,12 @@ Deletes an Asset Administration Shell Descriptor, i.e. de-registers an AAS
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
 aas_identifier = 'B'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -72,12 +72,12 @@ Deletes a Submodel Descriptor, i.e. de-registers a submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
@@ -121,15 +121,15 @@ Returns all Asset Administration Shell Descriptors
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
-asset_kind = aas_api_python_client.AssetKind()  # AssetKind | The Asset's kind (Instance or Type) (optional)
+asset_kind = aas_python_http_client.AssetKind()  # AssetKind | The Asset's kind (Instance or Type) (optional)
 asset_type = 'asset_type_example'  # str | The Asset's type (UTF8-BASE64-URL-encoded) (optional)
 
 try:
@@ -177,12 +177,12 @@ Returns all Submodel Descriptors
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
@@ -230,12 +230,12 @@ Returns a specific Asset Administration Shell Descriptor
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
 aas_identifier = 'B'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -278,12 +278,12 @@ Returns a specific Submodel Descriptor
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 
@@ -328,13 +328,13 @@ Creates a new Asset Administration Shell Descriptor, i.e. registers an AAS
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
-body = aas_api_python_client.AssetAdministrationShellDescriptor()  # AssetAdministrationShellDescriptor | Asset Administration Shell Descriptor object
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
+body = aas_python_http_client.AssetAdministrationShellDescriptor()  # AssetAdministrationShellDescriptor | Asset Administration Shell Descriptor object
 
 try:
     # Creates a new Asset Administration Shell Descriptor, i.e. registers an AAS
@@ -376,13 +376,13 @@ Creates a new Submodel Descriptor, i.e. registers a submodel
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
-body = aas_api_python_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
+body = aas_python_http_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -426,13 +426,13 @@ Updates an existing Asset Administration Shell Descriptor
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
-body = aas_api_python_client.AssetAdministrationShellDescriptor()  # AssetAdministrationShellDescriptor | Asset Administration Shell Descriptor object
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
+body = aas_python_http_client.AssetAdministrationShellDescriptor()  # AssetAdministrationShellDescriptor | Asset Administration Shell Descriptor object
 aas_identifier = 'B'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -475,13 +475,13 @@ Updates an existing Submodel Descriptor
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AssetAdministrationShellRegistryAPIApi()
-body = aas_api_python_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
+api_instance = aas_python_http_client.AssetAdministrationShellRegistryAPIApi()
+body = aas_python_http_client.SubmodelDescriptor()  # SubmodelDescriptor | Submodel Descriptor object
 aas_identifier = 'aas_identifier_example'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded)
 submodel_identifier = 'submodel_identifier_example'  # str | The Submodel’s unique id (UTF8-BASE64-URL-encoded)
 

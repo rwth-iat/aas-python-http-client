@@ -20,12 +20,12 @@ Deletes a specific AASX package from the server
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi()
+api_instance = aas_python_http_client.AASXFileServerAPIApi()
 package_id = 'B'  # str | The package Id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -66,12 +66,12 @@ Returns a specific AASX package from the server
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi()
+api_instance = aas_python_http_client.AASXFileServerAPIApi()
 package_id = 'B'  # str | The package Id (UTF8-BASE64-URL-encoded)
 
 try:
@@ -113,12 +113,12 @@ Returns a list of available AASX packages at the server
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi()
+api_instance = aas_python_http_client.AASXFileServerAPIApi()
 aas_id = 'B'  # str | The Asset Administration Shell’s unique id (UTF8-BASE64-URL-encoded) (optional)
 limit = 56  # int | The maximum number of elements in the response array (optional)
 cursor = 'cursor_example'  # str | A server-generated identifier retrieved from pagingMetadata that specifies from which position the result listing should continue (optional)
@@ -164,12 +164,12 @@ Stores the AASX package at the server
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi()
+api_instance = aas_python_http_client.AASXFileServerAPIApi()
 aas_ids = ['aas_ids_example']  # list[str] | 
 file = 'file_example'  # str | 
 file_name = 'file_name_example'  # str | 
@@ -215,12 +215,12 @@ Updates the AASX package at the server
 ```python
 from __future__ import print_function
 import time
-import aas_api_python_client
-from aas_api_python_client.rest import ApiException
+import aas_python_http_client
+from aas_python_http_client.rest import ApiException
 from pprint import pprint
 
 # create an instance of the API class
-api_instance = aas_api_python_client.AASXFileServerAPIApi()
+api_instance = aas_python_http_client.AASXFileServerAPIApi()
 aas_ids = ['aas_ids_example']  # list[str] | 
 file = 'file_example'  # str | 
 file_name = 'file_name_example'  # str | 

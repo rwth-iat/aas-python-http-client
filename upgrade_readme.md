@@ -20,7 +20,7 @@ The following steps are necessary to upgrade the client to a new version of the 
 - Replace the old client files with the new one from the downloaded archive
 
 ### 3. Adjust the new generated client
-- Rename the package `sawgger_client` to `aas_api_python_client` 
+- Rename the package `sawgger_client` to `aas_python_http_client` 
   - PyCharm: click on package older and press `Shift+F6` to rename the package
 - Adjust `README.md` if necessary
 - Add `basyx-python-sdk` to the requirements.txt

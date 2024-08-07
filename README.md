@@ -1,4 +1,4 @@
-# aas-api-python-client
+# aas-python-http-client
 Mostly generated python client for AAS API based on models from Basyx-Python-SDK. 
 
 All APIs of the Specification of the [Specification of the Asset Administration Shell: Part 2](http://industrialdigitaltwin.org/en/content-hub) in one collection. 
@@ -19,14 +19,14 @@ Python 3.8+
 You can install the python package directly from Github
 
 ```sh
-pip install git+https://github.com/rwth-iat/aas-api-python-client.git
+pip install git+https://github.com/rwth-iat/aas-python-http-client.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/rwth-iat/aas-api-python-client.git`)
+(you may need to run `pip` with root permission: `sudo pip install git+https://github.com/rwth-iat/aas-python-http-client.git`)
 
 Then import the package:
 
 ```python
-import aas_api_python_client 
+import aas_python_http_client 
 ```
 
 ### Setuptools
@@ -41,7 +41,7 @@ python setup.py install --user
 Then import the package:
 
 ```python
-import aas_api_python_client
+import aas_python_http_client
 ```
 
 ## Getting Started
@@ -49,8 +49,9 @@ import aas_api_python_client
 Please follow the [installation procedure](#installation--usage) and then run the following:
 
 ```python
-from aas_api_python_client import ApiClient, Configuration, AssetAdministrationShellRepositoryAPIApi, SubmodelRepositoryAPIApi
-from aas_api_python_client.util import string_to_base64url
+from aas_python_http_client import ApiClient, Configuration, AssetAdministrationShellRepositoryAPIApi,
+    SubmodelRepositoryAPIApi
+from aas_python_http_client.util import string_to_base64url
 from basyx.aas import model
 
 configuration = Configuration()
@@ -65,17 +66,18 @@ all_aas = aasRepoClient.get_all_asset_administration_shells().result
 print(all_aas)
 
 # query specific asset administration shell
-aas = aasRepoClient.get_asset_administration_shell_by_id(string_to_base64url('https://acplt.org/Test_AssetAdministrationShell'))
+aas = aasRepoClient.get_asset_administration_shell_by_id(
+    string_to_base64url('https://acplt.org/Test_AssetAdministrationShell'))
 print(aas)
 
 # query asset information
-aas_info = aasRepoClient.get_asset_information_aas_repository(string_to_base64url('https://acplt.org/Test_AssetAdministrationShell'))
+aas_info = aasRepoClient.get_asset_information_aas_repository(
+    string_to_base64url('https://acplt.org/Test_AssetAdministrationShell'))
 print(aas_info)
 
 # create a new asset administration shell
 new_aas = model.AssetAdministrationShell(aas_info, "https://acplt.org/Test_AAS")
 aasRepoClient.post_asset_administration_shell(new_aas)
-
 
 submodelRepoClient = SubmodelRepositoryAPIApi(api_client=api_client)
 
