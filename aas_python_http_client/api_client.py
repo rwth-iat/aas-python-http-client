@@ -94,11 +94,11 @@ class ApiClient(object):
                 return_type = get_type_hints(constructor).get('return', 'Unknown')
             except NameError as e:
                 if constructor_name == "_construct_value_list":
-                    return_type = Set[ValueReferencePair]
+                    return_type = "Set"  # Set[ValueReferencePair]
                 else:
                     logging.error(f"Failed to get return type of method {constructor_name}: {e}")
                     return_type = 'Unknown'
-            return_type = return_type if return_type == 'Unknown' else return_type.__name__
+            return_type = return_type if type(return_type) == str else return_type.__name__
             method_return_types[return_type] = constructor
         return method_return_types
 
