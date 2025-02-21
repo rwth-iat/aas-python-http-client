@@ -1,5 +1,5 @@
 # aas-python-http-client
-Mostly generated python client for AAS API based on models from Basyx-Python-SDK. 
+Mostly generated python client for AAS API based on models from [Basyx-Python-SDK](https://github.com/eclipse-basyx/basyx-python-sdk). 
 
 All APIs of the Specification of the [Specification of the Asset Administration Shell: Part 2](http://industrialdigitaltwin.org/en/content-hub) in one collection. 
 
