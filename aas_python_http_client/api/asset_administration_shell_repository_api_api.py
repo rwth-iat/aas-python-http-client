@@ -108,6 +108,8 @@ class AssetAdministrationShellRepositoryAPIApi(object):
 
         # Authentication setting
         auth_settings = []  # noqa: E501
+        if self.api_client.configuration.username != '' and self.api_client.configuration.password != '':
+            auth_settings = ['basic_auth']
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}', 'DELETE',
@@ -4740,6 +4742,8 @@ class AssetAdministrationShellRepositoryAPIApi(object):
 
         # Authentication setting
         auth_settings = []  # noqa: E501
+        if self.api_client.configuration.username != '' and self.api_client.configuration.password != '':
+            auth_settings = ['basic_auth']
 
         return self.api_client.call_api(
             '/shells', 'POST',
