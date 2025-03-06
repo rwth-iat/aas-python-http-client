@@ -107,9 +107,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
-        if self.api_client.configuration.username != '' and self.api_client.configuration.password != '':
-            auth_settings = ['basic_auth']
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()  # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}', 'DELETE',
@@ -218,7 +216,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/attachment', 'DELETE',
@@ -319,7 +317,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}', 'DELETE',
@@ -428,7 +426,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}', 'DELETE',
@@ -529,7 +527,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodel-refs/{submodelIdentifier}', 'DELETE',
@@ -622,7 +620,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/asset-information/thumbnail', 'DELETE',
@@ -724,7 +722,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells', 'GET',
@@ -826,7 +824,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/$reference', 'GET',
@@ -943,7 +941,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements', 'GET',
@@ -1056,7 +1054,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/$metadata', 'GET',
@@ -1173,7 +1171,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/$path', 'GET',
@@ -1286,7 +1284,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/$reference', 'GET',
@@ -1399,7 +1397,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/$value', 'GET',
@@ -1500,7 +1498,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodel-refs', 'GET',
@@ -1593,7 +1591,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}', 'GET',
@@ -1686,7 +1684,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/$reference', 'GET',
@@ -1779,7 +1777,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/asset-information', 'GET',
@@ -1888,7 +1886,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/octet-stream', 'application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/attachment', 'GET',
@@ -2005,7 +2003,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/operation-results/{handleId}', 'GET',
@@ -2122,7 +2120,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/operation-results/{handleId}/$value', 'GET',
@@ -2239,7 +2237,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/operation-status/{handleId}', 'GET',
@@ -2348,7 +2346,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}', 'GET',
@@ -2453,7 +2451,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/$metadata', 'GET',
@@ -2558,7 +2556,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/$path', 'GET',
@@ -2659,7 +2657,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/$reference', 'GET',
@@ -2768,7 +2766,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/$value', 'GET',
@@ -2885,7 +2883,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}', 'GET',
@@ -2998,7 +2996,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/$metadata', 'GET',
@@ -3111,7 +3109,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/$path', 'GET',
@@ -3224,7 +3222,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/$reference', 'GET',
@@ -3341,7 +3339,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/$value', 'GET',
@@ -3434,7 +3432,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/octet-stream', 'application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/asset-information/thumbnail', 'GET',
@@ -3555,7 +3553,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/invoke', 'POST',
@@ -3676,7 +3674,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/invoke-async', 'POST',
@@ -3797,7 +3795,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/invoke-async/$value', 'POST',
@@ -3918,7 +3916,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/invoke/$value', 'POST',
@@ -4035,7 +4033,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}', 'PATCH',
@@ -4152,7 +4150,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/$metadata', 'PATCH',
@@ -4269,7 +4267,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/$value', 'PATCH',
@@ -4394,7 +4392,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}', 'PATCH',
@@ -4519,7 +4517,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/$metadata', 'PATCH',
@@ -4644,7 +4642,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/$value', 'PATCH',
@@ -4741,9 +4739,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
-        if self.api_client.configuration.username != '' and self.api_client.configuration.password != '':
-            auth_settings = ['basic_auth']
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells', 'POST',
@@ -4856,7 +4852,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements', 'POST',
@@ -4977,7 +4973,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}', 'POST',
@@ -5082,7 +5078,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodel-refs', 'POST',
@@ -5187,7 +5183,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}', 'PUT',
@@ -5292,7 +5288,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/asset-information', 'PUT',
@@ -5421,7 +5417,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}/attachment', 'PUT',
@@ -5534,7 +5530,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}', 'PUT',
@@ -5655,7 +5651,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/submodels/{submodelIdentifier}/submodel-elements/{idShortPath}', 'PUT',
@@ -5768,7 +5764,7 @@ class AssetAdministrationShellRepositoryAPIApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/shells/{aasIdentifier}/asset-information/thumbnail', 'PUT',

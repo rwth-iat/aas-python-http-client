@@ -107,7 +107,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/attachment', 'DELETE',
@@ -200,7 +200,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}', 'DELETE',
@@ -301,7 +301,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements', 'GET',
@@ -398,7 +398,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/$metadata', 'GET',
@@ -495,7 +495,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/$path', 'GET',
@@ -592,7 +592,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/$reference', 'GET',
@@ -693,7 +693,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/$value', 'GET',
@@ -786,7 +786,7 @@ class SubmodelAPIApi(object):
             ['application/octet-stream', 'application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/attachment', 'GET',
@@ -887,7 +887,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/operation-results/{handleId}', 'GET',
@@ -988,7 +988,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/operation-results/{handleId}/$value', 'GET',
@@ -1089,7 +1089,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/operation-status/{handleId}', 'GET',
@@ -1182,7 +1182,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel', 'GET',
@@ -1283,7 +1283,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}', 'GET',
@@ -1380,7 +1380,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/$metadata', 'GET',
@@ -1477,7 +1477,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/$path', 'GET',
@@ -1574,7 +1574,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/$reference', 'GET',
@@ -1675,7 +1675,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/$value', 'GET',
@@ -1764,7 +1764,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/$metadata', 'GET',
@@ -1853,7 +1853,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/$path', 'GET',
@@ -1942,7 +1942,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/$reference', 'GET',
@@ -2035,7 +2035,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/$value', 'GET',
@@ -2140,7 +2140,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/invoke', 'POST',
@@ -2245,7 +2245,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/invoke-async', 'POST',
@@ -2350,7 +2350,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/invoke-async/$value', 'POST',
@@ -2455,7 +2455,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/invoke/$value', 'POST',
@@ -2556,7 +2556,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel', 'PATCH',
@@ -2665,7 +2665,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}', 'PATCH',
@@ -2782,7 +2782,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/$metadata', 'PATCH',
@@ -2899,7 +2899,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/$value', 'PATCH',
@@ -3000,7 +3000,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/$metadata', 'PATCH',
@@ -3101,7 +3101,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/$value', 'PATCH',
@@ -3198,7 +3198,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements', 'POST',
@@ -3303,7 +3303,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}', 'POST',
@@ -3416,7 +3416,7 @@ class SubmodelAPIApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}/attachment', 'PUT',
@@ -3517,7 +3517,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel', 'PUT',
@@ -3626,7 +3626,7 @@ class SubmodelAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel/submodel-elements/{idShortPath}', 'PUT',

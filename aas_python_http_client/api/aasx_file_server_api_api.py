@@ -107,7 +107,7 @@ class AASXFileServerAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/packages/{packageId}', 'DELETE',
@@ -200,7 +200,7 @@ class AASXFileServerAPIApi(object):
             ['application/asset-administration-shell-package', 'application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/packages/{packageId}', 'GET',
@@ -297,7 +297,7 @@ class AASXFileServerAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/packages', 'GET',
@@ -411,7 +411,7 @@ class AASXFileServerAPIApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/packages', 'POST',
@@ -533,7 +533,7 @@ class AASXFileServerAPIApi(object):
             ['multipart/form-data'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/packages/{packageId}', 'PUT',

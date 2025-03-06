@@ -107,7 +107,7 @@ class ConceptDescriptionRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/concept-descriptions/{cdIdentifier}', 'DELETE',
@@ -212,7 +212,7 @@ class ConceptDescriptionRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/concept-descriptions', 'GET',
@@ -305,7 +305,7 @@ class ConceptDescriptionRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/concept-descriptions/{cdIdentifier}', 'GET',
@@ -402,7 +402,7 @@ class ConceptDescriptionRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/concept-descriptions', 'POST',
@@ -507,7 +507,7 @@ class ConceptDescriptionRepositoryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/concept-descriptions/{cdIdentifier}', 'PUT',

@@ -107,7 +107,7 @@ class AssetAdministrationShellBasicDiscoveryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/lookup/shells/{aasIdentifier}', 'DELETE',
@@ -205,7 +205,7 @@ class AssetAdministrationShellBasicDiscoveryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/lookup/shells', 'GET',
@@ -298,7 +298,7 @@ class AssetAdministrationShellBasicDiscoveryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/lookup/shells/{aasIdentifier}', 'GET',
@@ -403,7 +403,7 @@ class AssetAdministrationShellBasicDiscoveryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/lookup/shells/{aasIdentifier}', 'POST',
