@@ -107,7 +107,7 @@ class SubmodelRegistryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel-descriptors/{submodelIdentifier}', 'DELETE',
@@ -200,7 +200,7 @@ class SubmodelRegistryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel-descriptors', 'GET',
@@ -293,7 +293,7 @@ class SubmodelRegistryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel-descriptors/{submodelIdentifier}', 'GET',
@@ -390,7 +390,7 @@ class SubmodelRegistryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel-descriptors', 'POST',
@@ -495,7 +495,7 @@ class SubmodelRegistryAPIApi(object):
             ['application/json'])  # noqa: E501
 
         # Authentication setting
-        auth_settings = []  # noqa: E501
+        auth_settings = self.api_client.configuration.get_auth_settings_keys()   # noqa: E501
 
         return self.api_client.call_api(
             '/submodel-descriptors/{submodelIdentifier}', 'PUT',

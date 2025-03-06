@@ -226,12 +226,22 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
             ).get('authorization')
         return token
 
+    def get_auth_settings_keys(self):
+        """Gets Keys of Auth Settings.
+
+        :return: The Auth Settings keys.
+        """
+        auth_setting = []
+        if self.username or self.password:
+            auth_setting.append('basic_auth')
+        return auth_setting
+
     def auth_settings(self):
         """Gets Auth Settings dict for api client.
 
         :return: The Auth Settings information dict.
         """
-        return {
+        return {'basic_auth': {'in': 'header', 'key': 'Authorization', 'value': self.get_basic_auth_token()}
         }
 
     def to_debug_report(self):
