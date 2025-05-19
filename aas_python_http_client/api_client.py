@@ -70,6 +70,10 @@ class ApiClient(object):
             configuration = Configuration()
         self.configuration = configuration
 
+        if self.configuration.host.endswith('/'):
+            logging.warning(f"Warning: The host URL '{self.configuration.host}' has a trailing slash. "
+                            "This may causes issues with endpoints. ")
+
         self.pool = ThreadPool()
         self.rest_client = rest.RESTClientObject(configuration)
         self.default_headers = {}
