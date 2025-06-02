@@ -102,6 +102,18 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
         self.safe_chars_for_path_param = ''
 
     @property
+    def host(self):
+        """The host URL.
+
+        The host URL is a template string that can be formatted with the
+        protocol, host_name, port, and version_prefix.
+
+        :param value: The host URL template.
+        :type: str
+        """
+        return self._host
+
+    @property
     def logger_file(self):
         """The logger file.
 
@@ -255,3 +267,18 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
                "Version of the API: V3.0.1\n"\
                "SDK Package Version: 1.0.0".\
                format(env=sys.platform, pyversion=sys.version)
+
+    @host.setter
+    def host(self, value):
+        """Sets the host URL.
+
+        The host URL is a template string that can be formatted with the
+        protocol, host_name, port, and version_prefix.
+
+        :param value: The host URL template.
+        :type: str
+        """
+        if value.endswith('/'):
+            logging.warning("The host URL ends with a slash. "
+                            "This may cause issues with API calls. ")
+        self._host = value
