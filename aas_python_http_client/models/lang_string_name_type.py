@@ -44,9 +44,9 @@ class LangStringNameType(AbstractLangString):
         """LangStringNameType - a model defined in Swagger"""  # noqa: E501
         self._text = None
         self.discriminator = None
+        AbstractLangString.__init__(self, *args, **kwargs)
         if text is not None:
             self.text = text
-        AbstractLangString.__init__(self, *args, **kwargs)
 
     @property
     def text(self):
